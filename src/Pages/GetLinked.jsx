@@ -1,35 +1,19 @@
 import React from "react";
 import "./GetLinked.css";
 import Navbar from "../Components/Navbar";
-import Hero from "../Components/Hero";
-import Introduction from "../Components/Introduction";
-import Rules from "../Components/Rules";
-import Criteria from "../Components/Criteria";
-import FAQs from "../Components/FAQs";
-import Timeline from "../Components/Timeline";
-import Prices from "../Components/Prices";
-import Sponsors from "../Components/Sponsors";
-import Policy from "../Components/Policy";
-import Footer from "../Components/Footer";
+
 import { Route, Routes } from "react-router-dom";
 import Login from "./Login";
+import Home from "../Components/Home";
 
 function GetLinked() {
   return (
     <div className="background">
-      <Hero />
+      <Navbar />
       <Routes>
-        <Route path="/Login" element={<Login />}></Route>
+        <Route index element={<Home />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
-      <Introduction />
-      <Rules />
-      <Criteria />
-      <FAQs />
-      <Timeline />
-      <Prices />
-      <Sponsors />
-      <Policy />
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import attributes from "../assets/attributes.png";
+import GradientButton from "./Buttons";
 
 function Criteria() {
   return (
@@ -46,6 +47,8 @@ function Criteria() {
           of specific technologies or APIs, and any other competition-specific
           requirements.
         </p>
+
+        <GradientButton text="Read More" />
       </div>
     </div>
   );

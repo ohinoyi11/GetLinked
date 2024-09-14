@@ -65,7 +65,7 @@ function Navbar() {
           >
             &times;
           </button>
-          <ul className="flex flex-col items-center space-y-6 text-lg">
+          <ul className="flex flex-col items-center space-y-6 text-lg font-sans">
             <li>Timeline</li>
             <li>Overview</li>
             <li>FAQs</li>

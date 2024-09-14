@@ -7,14 +7,13 @@ import glassman from "../assets/glassman.png";
 import Countdown from "../assets/Countdown.png";
 import "./Hero.css";
 import GradientButton from "./Buttons";
-import { Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import Login from "../Pages/Login";
 
 function Hero() {
   return (
     <div className="bg-gray-900 min-h-screen">
-      <Navbar />
-      <Route path="/Login" element={<Login />}></Route>
+      {/* <Route path="/Login" element={<Login />}></Route> */}
       {/* Hero Section */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-10">
         <h3 className="text-xl md:text-2xl text-white font mt-4 md:mt-8">
@@ -34,7 +33,10 @@ function Hero() {
               Participate in getLinked Tech Hackathon 2023 and stand a chance to
               win a big prize.
             </p>
-            <GradientButton className="m-6 text-white" text="Register" />
+
+            <Link to="/login">
+              <GradientButton text="Register" />
+            </Link>
             <img
               className="w-48 md:w-auto mt-6 md:mt-10"
               src={Countdown}

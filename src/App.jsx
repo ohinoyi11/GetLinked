@@ -5,12 +5,9 @@ import Login from "./Pages/Login";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <GetLinked />
-        <Route path="/Login" component={Login} />
-      </div>
-    </Router>
+    <div>
+      <GetLinked />
+    </div>
   );
 }
 
