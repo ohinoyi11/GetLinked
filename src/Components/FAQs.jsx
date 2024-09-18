@@ -43,10 +43,10 @@ function FAQs() {
 
       <div className="w-full md:w-1/2">
         <h3 className="text-2xl md:text-4xl text-white font-bold mb-4">
-          Frequently Asked <br />
-          Questions
+          Frequently Asked <br />{" "}
+          <span className="text-[#D434FE]"> Questions</span>
         </h3>
-        <p className="font text-white mb-6">
+        <p className="text-sm md:text-base font pb-5 text-white">
           We got answers to the questions that you might want to ask about
           getlinked Hackathon 1.0.
         </p>

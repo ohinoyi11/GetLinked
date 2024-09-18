@@ -11,8 +11,8 @@ function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex p-4 md:p-10 gap-10 text-white border-b-[1px] border-pink-500 justify-between items-center">
-        <h3 className="text-3xl md:text-4xl font-bold">
+      <div className="flex p-6 md:p-10 gap-10 text-white border-b-[1px] border-pink-500 justify-between items-center">
+        <h3 className="text-3xl md:text-4xl p-6 font-bold">
           get<span className="text-[#D434FE]">Linked</span>
         </h3>
 
@@ -52,14 +52,14 @@ function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
-        <div className="flex flex-col items-center justify-center h-full text-white">
+        <div className="flex flex-col items-center justify-center h-full font text-white">
           <button
             className="absolute top-4 right-4 text-white text-2xl"
             onClick={toggleMenu}
           >
             &times;
           </button>
-          <ul className="flex flex-col items-center space-y-6 text-lg font-sans">
+          <ul className="flex flex-col items-center space-y-6 text-lg font">
             <li>Timeline</li>
             <li>Overview</li>
             <li>FAQs</li>

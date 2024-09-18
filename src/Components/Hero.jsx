@@ -15,19 +15,20 @@ function Hero() {
     <div className="bg-gray-900 min-h-screen">
       {/* <Route path="/Login" element={<Login />}></Route> */}
 
-      <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-10">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left  md:p-10">
         <h3 className="text-xl md:text-2xl z-10 text-white font mt-4 md:mt-8 text-right float-right justify-end absolute right-8">
           Igniting a Revolution in HR Innovation
         </h3>
 
-        <div className="flex flex-col md:flex-row border-b-[1px] border-white mt-4 md:mt-8">
+        <div className="flex flex-col md:flex-row border-b-[1px] p-6 border-white mt-4 md:mt-8">
           <div className="flex flex-col items-center md:items-start md:pl-10">
             <img className="lens1 z w-40 md:w-auto" src={light} alt="" />
-            <img className="w-32 md:w-auto mt-4 md:mt-0" src={bulb} alt="" />
+            <img className="w-24 md:w-auto mt-4 md:mt-0" src={bulb} alt="" />
             <h1 className="relative text-4xl md:text-6xl font-bold text-white z-10 mt-4 ">
-              getLinked Tech Hackathon <span>1.0</span>
+              getLinked Tech Hackathon{" "}
+              <span className="text-[#D434FE]">1.0</span>
             </h1>
-            <p className="text-white text-lg md:text-xl mt-2 md:mt-4">
+            <p className="text-white font text-lg md:text-xl mt-2 md:mt-4">
               Participate in getLinked Tech Hackathon 2023 and stand a chance to
               win a big prize.
             </p>
