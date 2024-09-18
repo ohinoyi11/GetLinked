@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Login";
 import Home from "../Components/Home";
+import RegistrationConfirmation from "../Components/RegistrationConfirmation";
 
 function GetLinked() {
   return (
@@ -13,6 +14,7 @@ function GetLinked() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/confirmation" element={<RegistrationConfirmation />} />
       </Routes>
     </div>
   );

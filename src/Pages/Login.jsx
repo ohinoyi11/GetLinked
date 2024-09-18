@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import gdesigner from "../assets/gdesigner.png";
 import GradientButton from "../Components/Buttons";
-import { Link } from "react-router-dom";
+import congratulation from "../assets/congratulation.png";
 
 function Login() {
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Show confirmation overlay
+    setShowConfirmation(true);
+  };
+
   return (
-    <div className="flex h-full flex-col md:flex-row items-center justify-center pt-10 px-4 md:px-8 lg:px-16">
+    <div className="relative flex flex-col md:flex-row items-center justify-center pt-10 px-4 sm:px-6 md:px-8 lg:px-16 h-screen bg-[#150E28]">
       <div className="flex flex-1 items-center justify-center h-full space-y-6 md:space-y-0">
         {/* Image Section */}
         <div className="hidden md:block flex-1 h-full">
@@ -17,21 +25,21 @@ function Login() {
         </div>
 
         {/* Form Section */}
-        <div className="flex-1 flex items-center justify-center w-full h-full pb-11">
-          <div className="border-white border-2 leading-8 text-white p-3 md:p-6 bg-[#150E28] rounded-lg shadow-lg w-full max-w-md h-auto md:h-auto">
+        <div className="flex-1 flex items-center justify-center w-full h-full">
+          <div className="border-white border-2 leading-8 text-white p-3 sm:p-4 md:p-6 bg-[#150E28] rounded-lg shadow-lg w-full max-w-md h-auto">
             {/* Title */}
-            <h3 className="text-[#D434FE] text-xl md:text-2xl font-bold mb-2">
+            <h3 className="text-[#D434FE] text-xl sm:text-lg md:text-2xl font-bold mb-2 text-center">
               Register
             </h3>
-            <p className="text-sm md:text-base font mb-2">
+            <p className="text-sm md:text-base mb-2 text-center">
               Be part of this movement!
             </p>
-            <h3 className="font font-bold text-base md:text-lg mb-4">
+            <h3 className="font font-bold text-base md:text-lg mb-4 text-center">
               CREATE YOUR ACCOUNT
             </h3>
 
             {/* Form */}
-            <form className="space-y-3 mb-4">
+            <form className="space-y-3 mb-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Left Column */}
                 <div>
@@ -119,39 +127,65 @@ function Login() {
                   </select>
                 </div>
               </div>
-            </form>
+              <div className="text-sm md:text-base mb-2">
+                <p>Please review your registration details before submitting</p>
+              </div>
+              <div className="flex items-center space-x-2 text-white mb-3">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                />
+                <label htmlFor="agree" className="text-sm md:text-base">
+                  I agree with the{" "}
+                  <a href="#" className="text-indigo-500 underline">
+                    event terms and conditions
+                  </a>{" "}
+                  and{" "}
+                  <a href="#" className="text-indigo-500 underline">
+                    privacy policy
+                  </a>
+                  .
+                </label>
+              </div>
 
-            {/* Terms and Conditions */}
-            <p className="text-sm md:text-base mb-2">
-              Please review your registration details before submitting
-            </p>
-            <div className="flex items-center space-x-2 text-white mb-3">
-              <input
-                type="checkbox"
-                id="agree"
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-              />
-              <label htmlFor="agree" className="text-sm md:text-base">
-                I agree with the{" "}
-                <a href="#" className="text-indigo-500 underline">
-                  event terms and conditions
-                </a>{" "}
-                and{" "}
-                <a href="#" className="text-indigo-500 underline">
-                  privacy policy
-                </a>
-                .
-              </label>
-            </div>
-            <Link to="/login">
               <GradientButton
                 className="block w-full text-sm md:text-base"
                 text="Register Now"
               />
-            </Link>
+            </form>
           </div>
         </div>
       </div>
+
+      {/* Confirmation Overlay */}
+      {showConfirmation && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r text-white text-2xl font-bold z-50">
+          <div className="relative flex items-center justify-center h-screen w-screen z-10">
+            <div className="border-[#D434FE] p-6 border-2 rounded-md flex flex-col items-center justify-center text-center">
+              <img
+                src={congratulation}
+                alt="Congratulations"
+                className="mb-4"
+              />
+              <p className="text-2xl mb-2 font">
+                Congratulations! <br />
+                You have successfully Registered!
+              </p>
+              <p className="text-sm font">
+                Yes, it was easy and you did it! <br />
+                Check your mailbox for the next step.
+              </p>
+              {/* Wider Button */}
+              <GradientButton
+                className="w-full mt-4 font text-sm"
+                text="Back"
+              />
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-[#150E28] opacity-80" />
+        </div>
+      )}
     </div>
   );
 }
