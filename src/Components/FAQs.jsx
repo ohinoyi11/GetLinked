@@ -33,7 +33,6 @@ function FAQs() {
 
   return (
     <div className="flex flex-col md:flex-row m-6 md:m-10 border-b-[1px]">
-      {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
         <img
           className="w-64 md:w-auto object-contain"
@@ -42,7 +41,6 @@ function FAQs() {
         />
       </div>
 
-      {/* Text and FAQ Section */}
       <div className="w-full md:w-1/2">
         <h3 className="text-2xl md:text-4xl text-white font-bold mb-4">
           Frequently Asked <br />

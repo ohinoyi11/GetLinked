@@ -5,7 +5,6 @@ import GradientButton from "./Buttons";
 function Criteria() {
   return (
     <div className="border-b-[1px] flex flex-col md:flex-row-reverse m-6 md:m-11 text-white">
-      {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
         <img
           className="w-64 md:w-auto object-contain"
@@ -14,7 +13,6 @@ function Criteria() {
         />
       </div>
 
-      {/* Text Section */}
       <div className="w-full md:w-1/2">
         <h3 className="text-2xl md:text-4xl font-bold pb-5">
           Judging Criteria Key Attributes

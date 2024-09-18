@@ -3,7 +3,6 @@ import React from "react";
 function TimelineText({ title, description, date }) {
   return (
     <div className="flex flex-col md:flex-row items-start relative mb-8 md:mb-12 text-white">
-      {/* Text Content */}
       <div
         className={`ml-0 md:ml-10 ${
           description.length > 80 ? "text-sm md:text-base" : "text-base"

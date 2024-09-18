@@ -8,14 +8,13 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Show confirmation overlay
+
     setShowConfirmation(true);
   };
 
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-center pt-10 px-4 sm:px-6 md:px-8 lg:px-16 h-screen bg-[#150E28]">
       <div className="flex flex-1 items-center justify-center h-full space-y-6 md:space-y-0">
-        {/* Image Section */}
         <div className="hidden md:block flex-1 h-full">
           <img
             className="w-full h-full object-cover"
@@ -24,10 +23,8 @@ function Login() {
           />
         </div>
 
-        {/* Form Section */}
         <div className="flex-1 flex items-center justify-center w-full h-full">
           <div className="border-white border-2 leading-8 text-white p-3 sm:p-4 md:p-6 bg-[#150E28] rounded-lg shadow-lg w-full max-w-md h-auto">
-            {/* Title */}
             <h3 className="text-[#D434FE] text-xl sm:text-lg md:text-2xl font-bold mb-2 text-center">
               Register
             </h3>
@@ -38,10 +35,8 @@ function Login() {
               CREATE YOUR ACCOUNT
             </h3>
 
-            {/* Form */}
             <form className="space-y-3 mb-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {/* Left Column */}
                 <div>
                   <label
                     htmlFor="team-name"
@@ -84,7 +79,6 @@ function Login() {
                   </select>
                 </div>
 
-                {/* Right Column */}
                 <div>
                   <label
                     htmlFor="phone"
@@ -176,7 +170,7 @@ function Login() {
                 Yes, it was easy and you did it! <br />
                 Check your mailbox for the next step.
               </p>
-              {/* Wider Button */}
+
               <GradientButton
                 className="w-full mt-4 font text-sm"
                 text="Back"

@@ -1,4 +1,3 @@
-// src/pages/RegistrationConfirmation.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import congratulation from "../assets/congratulation.png";
@@ -6,10 +5,9 @@ import congratulation from "../assets/congratulation.png";
 function RegistrationConfirmation() {
   const navigate = useNavigate();
 
-  // Optional: Redirect to home after a few seconds
   setTimeout(() => {
     navigate("/");
-  }, 5000); // Redirect after 5 seconds
+  }, 5000);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#150e28] text-white text-2xl font-bold z-50">

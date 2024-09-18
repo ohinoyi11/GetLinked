@@ -4,7 +4,6 @@ import TimelineText from "./TimelineText";
 function Timeline() {
   return (
     <div className="p-6 md:p-10">
-      {/* Title and Description */}
       <h3 className="text-center text-white text-3xl font-bold mb-4">
         Timeline
       </h3>
@@ -13,12 +12,9 @@ function Timeline() {
         event.
       </p>
 
-      {/* Timeline Container */}
       <div className="relative">
-        {/* Vertical Line */}
         <div className="absolute left-4 top-0 bottom-0 w-1 bg-white opacity-50"></div>
 
-        {/* Timeline Entries */}
         <div className="ml-8 md:ml-16 space-y-8 md:space-y-12">
           <TimelineText
             title="Hackathon Announcement"
